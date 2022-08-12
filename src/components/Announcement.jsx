@@ -16,6 +16,7 @@ const Announcement = () => {
   return (
     <Container>
       50% deal off New WINTER jacket !!
+    
     </Container>
   )
 }
