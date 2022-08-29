@@ -1,71 +1,40 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faAnglesLeft, faAnglesRight} from '@fortawesome/free-solid-svg-icons';
-import React from 'react';
-import  { Component } from 'react';
-
+import { faAnglesLeft, faAnglesRight } from '@fortawesome/free-solid-svg-icons';
+import React,{ useState} from 'react';
+import { Component } from 'react';
+import { sliderItems } from '../data';
+import Carousel from 'react-bootstrap/Carousel';
 import styled from 'styled-components'
 import { style } from '@mui/system';
+import Button from 'react-bootstrap/Button';
 
-const Container = styled.div`
-  width: 100%;
-  height:100vh;
-  display:flex;
-  background-color:coral;
-  position:relative;
-`;
-const Arrow = styled.div`
-width:50px;
-height:50px;
-background-color:white;
-border-radius: 50% ;
-display:flex;
-align-items:center;
-justify-content:center;
-position:absolute;
-top:0;
-bottom:0;
-left:${props=> props.direction === "left" && "10px"};
-right:${props=> props.direction === "right" && "10px"};
-margin:auto;
-cursor:pointer;
-opacity:0.5;
-`;
-
-const Wrapper = styled.div`
-height:100%;
-`;
-
-const Slide = styled.div`
-display:flex;
-align-items:center;
-`;
-const ImageContainer = styled.div`
-flex: 1;
-`;
-const InfoContainer = styled.div`
-flex: 1;
-`;
 
 const Slider = () => {
-  return (
-    <Container>
-        <Arrow direction="left">
-        <FontAwesomeIcon icon={faAnglesLeft} />
-        </Arrow>
-        <Wrapper>
-        <ImageContainer>
-        <img src="https://i.ibb.co/z27wdSs/Capture.png" alt="12" border="0" />
-        
-        </ImageContainer>
-        <InfoContainer></InfoContainer>
+  const [sliderIndex , setSliderIndex] = useState(0);
 
-        </Wrapper>
-        <Arrow direction="right">
-        <FontAwesomeIcon icon={faAnglesRight} />
-        
-        </Arrow>
-    </Container>
-  )
+
+
+  return (
+    <Carousel fade>
+    {sliderItems.map((item) => (
+      <Carousel.Item  >
+     
+     <img
+       className="d-block w-100" style={{height: '320px'}}
+       src={item.img}
+       alt="{item.id}"
+     />
+     <Carousel.Caption className="bg-secondary border  border-5 rounded"  >
+       <h1 >{item.title}</h1>
+       <p>{item.desc}</p>
+       <Button variant="outline-warning" className="border  border-5 rounded">SHOP NOW</Button>
+     </Carousel.Caption>
+   </Carousel.Item>
+    ))};
+      
+      
+    </Carousel>
+  );
 }
 
 export default Slider

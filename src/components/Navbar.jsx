@@ -19,6 +19,7 @@ padding: 10px 20px;
 color:dark;
 display:flex;
 justify-content:space-between;
+flex-wrap :wrap;
 align-items:center;
 `;
 const SearchContainer = styled.div`
