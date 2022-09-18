@@ -10,7 +10,7 @@ const Categories = () => {
     {categories.map( (item) => (
       <Card className="m-5">
       
-        <Card.Img variant="top" style={{height: '320px'}} src={item.img} />
+        <Card.Img variant="top" style={{height: '320px'}} src={item.img} key={item.id}/>
         <Card.Body>
           <Card.Title>{item.title}</Card.Title>
           <Card.Text>

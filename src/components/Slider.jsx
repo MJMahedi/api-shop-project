@@ -1,18 +1,10 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAnglesLeft, faAnglesRight } from '@fortawesome/free-solid-svg-icons';
 import React,{ useState} from 'react';
-import { Component } from 'react';
 import { sliderItems } from '../data';
 import Carousel from 'react-bootstrap/Carousel';
-import styled from 'styled-components'
-import { style } from '@mui/system';
 import Button from 'react-bootstrap/Button';
-
 
 const Slider = () => {
   const [sliderIndex , setSliderIndex] = useState(0);
-
-
 
   return (
     <Carousel fade>
@@ -21,7 +13,7 @@ const Slider = () => {
      
      <img
        className="d-block w-100" style={{height: '320px'}}
-       src={item.img}
+       src={item.img} key={item.id}
        alt="{item.id}"
      />
      <Carousel.Caption className="bg-secondary border  border-5 rounded"  >

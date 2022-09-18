@@ -21,6 +21,7 @@ display:flex;
 justify-content:space-between;
 flex-wrap :wrap;
 align-items:center;
+
 `;
 const SearchContainer = styled.div`
 border:3px solid white;
