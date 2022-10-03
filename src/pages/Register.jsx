@@ -8,7 +8,7 @@ const Container = styled.div`
     background:linear-gradient(
         rgba(255,255,255,0.5),
         rgba(255,255,255,0.5)
-    ), url("https://i.ibb.co/s2ZGr57/pexels-pixabay-51119.jpg");
+    ), url("https://i.ibb.co/s2ZGr57/pexels-pixabay-51119.jpg") center ;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +16,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
     width: 40%;
     padding: 20px;
-    background-color: orange;
+    background-color: white;
 `;
 const Title = styled.h1`
     font-size: 24px;
@@ -24,15 +24,31 @@ const Title = styled.h1`
 
 `;
 const Form = styled.form`
+    display: flex;
+    flex-wrap: wrap;
 
 `;
 const Input = styled.input`
+    flex : 1;
+    min-width : 40%;
+    margin: 20px 10px 0px 0px;
+    padding: 10px;
 
 `;
 const Agreement = styled.span`
+    font-size: 12px;
+    margin: 20px 0px;
 
 `;
 const Button = styled.div`
+    width: 40%;
+    border: none;
+    padding: 15px 20px;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+
 
 `;
 
@@ -40,7 +56,7 @@ const Register = () => {
     return (
         <Container>
             <Wrapper>
-            <Title>Create An account </Title>
+            <Title>Create An account </Title>  
             <Form>
                 <Input placeholder= "name" />
                 <Input placeholder= "last name" />
@@ -53,8 +69,6 @@ const Register = () => {
                 </Agreement>
                 <Button>CREATE</Button>
             </Form>
-
-
             </Wrapper>
 
         </Container>

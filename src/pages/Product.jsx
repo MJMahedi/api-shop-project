@@ -141,6 +141,7 @@ const Product = () => {
                     <Desc> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis ab minima pariatur ducimus! Praesentium, maxime? </Desc>
                     <Price>$ 20</Price>
                     <FilterContainer>
+                    
                         <Filter>
                             <FilterTitle>Color</FilterTitle>
                             <FilterColor color= "black" />

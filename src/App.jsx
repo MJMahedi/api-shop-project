@@ -4,7 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ProductList from './pages/ProductList';
 import Product from './pages/Product';
 import Register from './pages/Register';
+import Login from './pages/Login';
+import Cart from './pages/Cart';
 const App = () => {
-return <Register></Register>;
+return <Cart></Cart>;
 };
 export default App;
